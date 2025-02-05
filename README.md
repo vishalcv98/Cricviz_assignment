@@ -1,4 +1,5 @@
-1.	Which Machine Learning model have you picked and why? 
+1.	Which Machine Learning model have you picked and why?
+   
 A.	I picked an XGBoost Classifier model with added aggregate level features. When I tried a regression model, the model failed
 to predict boundaries (4s and 6s) completely, inspite of me trying different sets of hyperparameters and weighting methods.
 The XGBoost classifier was able to predict boundaries decently, and even in case of incorrect predictions, the predicted
@@ -7,14 +8,14 @@ advantage of providing us probability of classes, and hence was almost completel
 I also felt coaches might understand better if I could explain the probability a delivery will be hit for a boundary or
 probability a delivery will be a dot ball.
 
-2.	How are you evaluating the results of your model? (e.g. What metrics and
+3.	How are you evaluating the results of your model? (e.g. What metrics and
 visualisations are most useful)
 A.	A combination of metrics were used to evaluate my model. Along with a simple accuracy, I used log-loss and multi-class
 roc-auc scores, both of which indicate how well the model distinguishes between the boundaries. 0s and 1s are being captured
 quite well, but given the data, the model seems to struggle to identify boundary balls. However, this means that if the model classifies
 a ball as a boundary ball, it must be taken seriously!
 
-3.	Does the variance of your model's output distribution match the variance of the target distribution (runs)?
+4.	Does the variance of your model's output distribution match the variance of the target distribution (runs)?
 A.	No, the variance of the model’s output fails to match the variance of the output. The variance of the actuals is 2.65,
  while variance of predictions is 1.91, which means the ratio of variances is about 0.72. This indicates that the predictions
  are too concentrated. 
